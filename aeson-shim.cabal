@@ -1,0 +1,19 @@
+cabal-version: 3.0
+name: aeson-shim
+version: 0.1
+maintainer: SimSpace
+copyright: 2020 SimSpace Corp
+license: MPL-2.0
+license-file: LICENSE
+
+library
+  ghc-options:
+    -Wall
+  build-depends:
+    , aeson
+    , base
+    , text
+    , unordered-containers
+  hs-source-dirs: src
+  exposed-modules: Data.Aeson.Shim
+  default-language: Haskell2010
