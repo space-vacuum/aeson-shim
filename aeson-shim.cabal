@@ -10,10 +10,16 @@ library
   ghc-options:
     -Wall
   build-depends:
-    , aeson
     , base
     , text
     , unordered-containers
   hs-source-dirs: src
   exposed-modules: Data.Aeson.Shim
   default-language: Haskell2010
+
+  if impl(ghc < 9)
+    build-depends:
+        aeson < 2
+  if impl(ghc >= 9)
+    build-depends:
+        aeson >= 2
